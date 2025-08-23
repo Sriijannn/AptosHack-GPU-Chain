@@ -1,0 +1,286 @@
+/* AuthPage.css */
+
+body, .authContainer {
+  background: #101214;
+  min-height: 100vh;
+}
+
+.authContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #101214;
+  padding: 20px;
+}
+
+.authCard, .animatedCard {
+  width: 100%;
+  max-width: 420px;
+  background: #181b1f;
+  border-radius: 20px;
+  border: 1px solid #232d23;
+  padding: 48px 36px;
+  box-shadow: 0 8px 32px rgba(34,224,107,0.10), 0 2px 8px rgba(34,224,107,0.10);
+  margin: 32px 0;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.authCard:hover, .animatedCard:hover {
+  box-shadow: 0 16px 48px rgba(34,224,107,0.18);
+  background: #1a1d22;
+}
+
+.tabContainer {
+  display: flex;
+  margin-bottom: 24px;
+  gap: 8px;
+  background: #181f18;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 0;
+  cursor: pointer;
+  font-weight: 700;
+  background: transparent;
+  color: #B9CBB9;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background: #232d23;
+  color: #22E06B;
+}
+
+.tabActive {
+  background: linear-gradient(90deg, #22E06B 0%, #1CB859 100%);
+  color: #fff;
+}
+
+.tabActive:hover {
+  background: linear-gradient(90deg, #1CB859 0%, #22E06B 100%);
+  color: #fff;
+}
+
+.authTitle {
+  color: #22E06B;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(34,224,107,0.10);
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input {
+  background: #23272f;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: #22E06B;
+  box-shadow: 0 0 0 2px rgba(34,224,107,0.15);
+}
+
+.input::placeholder {
+  color: #666;
+}
+
+.authBtn, .heroBtn, .headerBtnPrimary {
+  background: linear-gradient(90deg, #22E06B 0%, #1CB859 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px 0;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(34,224,107,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.authBtn:hover, .heroBtn:hover, .headerBtnPrimary:hover {
+  background: linear-gradient(90deg, #1CB859 0%, #22E06B 100%);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.authBtn:active {
+  transform: translateY(0);
+}
+
+.authBtn:disabled {
+  background: #333;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.authSwitch {
+  text-align: center;
+  margin-top: 24px;
+  color: #B9CBB9;
+}
+
+.switchTab {
+  color: #22E06B;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.switchTab:hover {
+  color: #1CB859;
+}
+
+.message {
+  padding: 14px;
+  border-radius: 8px;
+  margin-top: 18px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.messageSuccess {
+  background: rgba(34, 224, 107, 0.1);
+  border: 1px solid #22E06B;
+  color: #22E06B;
+}
+
+.messageError {
+  background: rgba(255, 82, 82, 0.1);
+  border: 1px solid #ff5252;
+  color: #ff5252;
+}
+
+.backBtn {
+  background: transparent;
+  color: #B9CBB9;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px 24px;
+  margin-top: 18px;
+  font-size: 15px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.backBtn:hover {
+  background: #181f18;
+  color: #22E06B;
+}
+
+/* Loading state */
+/* Animations */
+.animatedCard {
+  transition: transform 0.25s cubic-bezier(.25,.8,.25,1), box-shadow 0.25s;
+  will-change: transform;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 2px 8px rgba(34,224,107,0.08);
+  background: linear-gradient(135deg, #22E06B 0%, #A259F7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.fadeIn {
+  animation: fadeInUp 0.8s cubic-bezier(.25,.8,.25,1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slideInLeft {
+  animation: slideInLeft 0.6s cubic-bezier(.25,.8,.25,1);
+}
+.slideInRight {
+  animation: slideInRight 0.6s cubic-bezier(.25,.8,.25,1);
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.bounceIn {
+  animation: bounceIn 0.7s;
+}
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  60% { opacity: 1; transform: scale(1.05); }
+  80% { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+.shake {
+  animation: shake 0.5s;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-8px); }
+  80% { transform: translateX(8px); }
+  100% { transform: translateX(0); }
+}
+
+/* Glow cursor effect */
+.glow-cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34,224,107,0.10) 0%, rgba(34,224,107,0.04) 60%, transparent 100%);
+  box-shadow: 0 0 12px 2px #22E06B22, 0 0 0 0 #22E06B00;
+  mix-blend-mode: lighten;
+  transition: background 0.2s, box-shadow 0.2s;
+  pointer-events: none;
+  will-change: transform;
+  opacity: 0.7;
+}
+@media (max-width: 600px) {
+  .glow-cursor { display: none; }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .authCard, .animatedCard {
+    padding: 18px 6px;
+    margin: 12px 0;
+    max-width: 98vw;
+  }
+
+  .authTitle {
+    font-size: 1.3rem;
+  }
+}
