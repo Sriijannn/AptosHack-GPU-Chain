@@ -1,0 +1,290 @@
+/* Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Custom color palette */
+  --green-50: #E6FFF2;
+  --green-100: #B3FFD9;
+  --green-200: #80FFBF;
+  --green-300: #4DFFA6;
+  --green-400: #22E06B;
+  --green-500: #1CB859;
+  --green-600: #158F47;
+  --green-700: #0F6635;
+  --green-800: #0A3D23;
+  --green-900: #051912;
+
+  /* Dark theme colors */
+  --gray-50: #F7FAFC;
+  --gray-100: #EDF2F7;
+  --gray-200: #E2E8F0;
+  --gray-300: #CBD5E0;
+  --gray-400: #A0AEC0;
+  --gray-500: #718096;
+  --gray-600: #4A5568;
+  --gray-700: #2D3748;
+  --gray-800: #1A202C;
+  --gray-900: #171923;
+
+  color-scheme: dark;
+  color: white;
+  background-color: var(--gray-900);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--gray-900);
+  color: white;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: var(--green-400);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--green-300);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.card {
+  padding: 2em;
+}
+
+/* Utility classes for common styling patterns */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.rounded {
+  border-radius: 0.375rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Primary button styles */
+.btn-primary {
+  background-color: var(--green-400);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--green-500);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 224, 107, 0.3);
+}
+
+/* Secondary button styles */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--green-400);
+  border: 2px solid var(--green-400);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--green-400);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Input styles */
+.input {
+  background-color: var(--gray-700);
+  border: 2px solid var(--gray-600);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--green-400);
+  box-shadow: 0 0 0 3px rgba(34, 224, 107, 0.1);
+}
+
+.input::placeholder {
+  color: var(--gray-400);
+}
+
+/* Container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dark theme specific overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: white;
+    background-color: var(--gray-900);
+  }
+}
