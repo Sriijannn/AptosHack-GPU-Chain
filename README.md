@@ -1,1 +1,1 @@
-# Aptos-Gpu-Chain
+# Building a GPU Rental Service
