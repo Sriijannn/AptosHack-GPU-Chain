@@ -57,14 +57,6 @@ GPU-Chain solves these issues by creating a decentralized, peer-to-peer network 
 
 ---
 
-## 🗺️ Future Goals  
-
-- **⚡ Short Term**: Integrate Shelby, support indie devs and AI researchers.  
-- **⚡ Medium Term**: Add stablecoins, advanced reputation, benchmarking.  
-- **⚡ Long Term**: Become a decentralized Web3 alternative to AWS/Google Cloud for GPU computing.  
-
----
-
 ## 👨‍💻 The Team  
 
 Project by **Team Deb Webelopers**.  
