@@ -1,0 +1,108 @@
+/* Fan visualization container */
+.fan-visualization {
+  width: 100vw;
+  height: 100vh;  /* Slightly reduced */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  margin: 10vh 0;  /* Significantly reduced margin */
+  padding: 0;
+}
+
+/* Ring styles */
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ring-1 {
+  width: 85vh;
+  height: 85vh;
+  border: 1.8rem solid #8eff48;
+}
+
+.ring-2 {
+  width: 72vh;
+  height: 72vh;
+  border: 1.8rem solid rgba(142, 255, 72, 0.64);
+}
+
+.ring-3 {
+  width: 59vh;
+  height: 59vh;
+  border: 1.8rem solid rgba(142, 255, 72, 0.30);
+}
+
+.ring-4 {
+  width: 46vh;
+  height: 46vh;
+  border: 1.8rem solid rgba(142, 255, 72, 0.13);
+}
+
+.ring-5 {
+  width: 33vh;
+  height: 33vh;
+  border: 1.8rem solid rgba(142, 255, 72, 0.07);
+}
+
+/* Fan image */
+.fan-image {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 768px) {
+  .fan-visualization {
+    height: 110vh;
+    margin: 5vh 0;  /* Reduced margin for desktop */
+    overflow: auto;
+  }
+
+  .ring-1 {
+    width: 90vh;
+    height: 90vh;
+  }
+
+  .ring-2 {
+    width: 75vh;
+    height: 75vh;
+  }
+
+  .ring-3 {
+    width: 60vh;
+    height: 60vh;
+  }
+
+  .ring-4 {
+    width: 45vh;
+    height: 45vh;
+  }
+
+  .ring-5 {
+    width: 30vh;
+    height: 30vh;
+  }
+
+  .fan-image {
+    width: auto;
+    max-width: 500px;
+  }
+}
+
+/* Ensure the fan visualization container doesn't break layout */
+.main {
+  position: relative;
+  overflow-x: hidden;
+}

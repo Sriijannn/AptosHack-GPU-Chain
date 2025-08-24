@@ -1,0 +1,20 @@
+[package]
+name = "gpu_chain"
+version = "1.0.0"
+authors = ["Srijan Tripathi"]
+
+[addresses]
+gpu_chain = "0x701d1cc897b19977a5485c8c8fcc793a27a9b3999f74764b898404c7dd771c21"
+
+[dev-addresses]
+gpu_chain = "0x701d1cc897b19977a5485c8c8fcc793a27a9b3999f74764b898404c7dd771c21"
+
+[dependencies.AptosFramework]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-framework"
+
+[dependencies.AptosStdlib]
+git = "https://github.com/aptos-labs/aptos-core.git"
+rev = "mainnet"
+subdir = "aptos-move/framework/aptos-stdlib"
