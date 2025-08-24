@@ -1,4 +1,4 @@
-# GPU-Chain ⛓️  
+# GPU-Chain By Deb Weblopers ⛓️  
 *"Your Uber for GPUs"*  
 
 GPU-Chain is a **decentralized marketplace built on the Aptos blockchain**, designed to connect GPU owners with users who need computational power. We unlock underutilized global GPU resources, making high-performance computing accessible and affordable for everyone.  
