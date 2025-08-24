@@ -65,9 +65,9 @@ GPU-Chain solves these issues by creating a decentralized, peer-to-peer network 
 AptosHack-GPU-Chain/
 ├── backend/                    # Express.js API server
 ├── client/                     # React frontend application  
-├── gpu-chain-contract/         # Aptos Move smart contracts (v1)
+├── gpu-chain-contract/         # Aptos Move smart contracts (development)
 ├── gpu-worker/                 # Dockerized GPU task processing
-├── gpu_chain_aptos_contracts/  # Aptos Move smart contracts (v2)
+├── gpu_chain_aptos_contracts/  # Aptos Move smart contracts (production)
 ├── .DS_Store
 ├── .gitignore
 └── README.md
@@ -157,3 +157,26 @@ client/
 - `deploy.sh` - Automated deployment script for Aptos network
 
 ---
+
+### 5. GPU Worker (/gpu-worker/)
+*Purpose*: Dockerized GPU task execution engine
+
+*Architecture*:
+- Dockerfile - Container setup for GPU workloads
+- server.js - Node.js coordination server
+- job-worker.js - Task distribution and management
+- gpu_task_runner.py - Core Python GPU execution engine
+- game_renderer.py - Advanced game rendering pipeline
+- game_renderer_simple.py - Basic rendering for testing
+- task_splitter.py - Breaks large jobs into chunks
+- task_aggregator.py - Combines distributed results
+- test_*.js/py - Comprehensive testing suite
+
+*Core Capabilities*:
+- *Containerized Execution*: Docker isolation for security and resource management
+- *Task Distribution*: Advanced splitting/aggregation for large computational jobs
+- *Multi-language Support*: Python for GPU processing, Node.js for coordination
+- *Game Rendering*: Specialized pipelines for gaming and AI workloads
+
+---
+
