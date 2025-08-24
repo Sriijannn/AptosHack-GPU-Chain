@@ -175,8 +175,6 @@ client/
 *Core Capabilities*:
 - *Containerized Execution*: Docker isolation for security and resource management
 - *Task Distribution*: Advanced splitting/aggregation for large computational jobs
-- *Multi-language Support*: Python for GPU processing, Node.js for coordination
-- *Game Rendering*: Specialized pipelines for gaming and AI workloads
 
 ---
 
